@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltX - Monitoramento de Energia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Cabeçalho -->
+        <div class="header">
+            <h1>VoltX</h1>
+            <h2>Monitoramento de Energia</h2>
+        </div>
+
+        <!-- Painel Principal de Consumo -->
+        <div class="main-consumption">
+            <div class="consumption-chart">
+                <canvas id="mainChart"></canvas>
+                <p>29% Economia</p>
+            </div>
+            <div class="devices">
+                <div class="device">
+                    <img src="geladeira.png" alt="Geladeira">
+                    <p>Geladeira</p>
+                    <p>29%</p>
+                </div>
+                <div class="device">
+                    <img src="" alt="Chuveiro">
+                    <p>Chuveiro</p>
+                    <p>33%</p>
+                </div>
+                <div class="device">
+                    <img src="" alt="Carregador">
+                    <p>Carregador</p>
+                    <p>5%</p>
+                </div>
+                <div class="device">
+                    <img src="" alt="Ar-condicionado">
+                    <p>Ar-condicionado</p>
+                    <p>20%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Economia Mensal -->
+        <div class="savings">
+            <h2>Economia Mensal</h2>
+            <div class="savings-details">
+                <canvas id="savingsChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
