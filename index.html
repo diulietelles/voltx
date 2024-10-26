@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de Alerta -->
+  <div class="alert-bar">
+    <p>⚠️ Alerta: Consumo excessivo de energia detectado!</p>
+  </div>
+
+  <!-- Dashboard Principal -->
+  <div class="dashboard">
+    <!-- Cartões com Dispositivos -->
+    <div class="cards">
+      <div class="card" id="charger">
+        <div class="card-alert">⚠️ Alerta de Consumo!</div>
+        <img src="celu.png" alt="Carregador de celular">
+        <div class="info">
+          <h3>Carregador de Celular</h3>
+          <p>Consumo: 15W</p>
+          <button onclick="disconnectDevice('charger')">Desconectar</button>
+        </div>
+      </div>
+      <div class="card" id="tv">
+        <img src="ac.png" alt="Ar Condicionado">
+        <div class="info">
+          <h3>Ar Condicionado</h3>
+          <p>Consumo: 80W</p>
+          <button onclick="disconnectDevice('tv')">Desconectar</button>
+        </div>
+      </div>
+      <div class="card" id="Geladeira">
+        <img src="geladeira.png" alt="Laptop">
+        <div class="info">
+          <h3>Geladeira</h3>
+          <p>Consumo: 45W</p>
+          <button onclick="disconnectDevice('Geladeira')">Desconectar</button>
+        </div>
+      </div>
+      <div class="card" id="appliance">
+        <img src="chuveiro.png" alt="Ducha">
+        <div class="info">
+          <h3>Ducha</h3>
+          <p>Consumo: 120W</p>
+          <button onclick="disconnectDevice('appliance')">Desconectar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gráfico de Consumo -->
+    <div class="chart">
+      <h3>Consumo Diário de Energia</h3>
+      <canvas id="energyChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+
+
